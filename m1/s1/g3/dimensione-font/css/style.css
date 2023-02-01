@@ -1,0 +1,27 @@
+/*
+posso modificare la dimensione assoluta di tutti i testi del body
+
+body {
+    font-size: 20px; => pixel è dimensione assoluta
+}
+*/
+
+:root {
+    font-size: 25px;
+}
+
+#t1 {
+    font-size: 1rem; /* rem proporzionale ad elemento :root) es i questo caso 1 rem = 25 px, 2 rem= 50 px etc */
+}
+
+#t2 {
+    font-size: 16px;
+}
+#parent {
+    font-size: 50px;
+}
+
+#t3 {
+    font-size: 1em; 
+}
+ 
