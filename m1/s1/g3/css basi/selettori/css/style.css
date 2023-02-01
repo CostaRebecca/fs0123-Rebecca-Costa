@@ -1,0 +1,38 @@
+#rosso {
+    background-color: red;
+}
+
+.giallo {
+    background-color: yellow;
+
+}
+
+/* conflitti 
+
+div =>1
+classi =>10
+in => 100
+inline style => 1000 
+
+*/
+#conflitti #rosa.verde { /* 100 + 100 + 10 = 210 */
+    background-color: purple; 
+}
+
+#conflitti #rosa { /* 100 + 10 = 200 */
+    background-color: pink; 
+}
+
+#conflitti .verde{ /*100 + 10 = 110 */
+    background-color: green;
+}
+
+#conflitti div {
+    background-color: black;
+}
+
+#conflitti div { /*a parità di peso vince quello che si trova più in basso */ /*100 + 1 = 101*/
+    background-color: blue; /* !important */
+    
+}
+
