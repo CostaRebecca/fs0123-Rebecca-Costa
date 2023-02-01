@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+        <input form="text">   <!--esempio-->
+        <input type="checkbox"> <!--esempio-->
+        <input type="text" required name="Nome" placeholder="Nome"> <!--required rende il campo obbligatorio per l'invio-->
+        <input type="text" name="Cognome" placeholder="Cognome">
+        <input type="text" name="Data di nascita" placeholder="Data di nascita">
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="password" name="password" placeholder="password">
+
+        <input type="text" name="classe" value="fs0123A">
+        <input type="text" name="classe" value="fs0123A" readonly> <!--con readonly non posso più scriverci dentro su schermo-->
+        <input type="text" name="classe" value="fs0123A" readonly disabled> <!--con dosabled non viene inviato neanche-->
+
+        <label for="consenso">Accetto il trattamento dei dati</label>
+        <input type="checkbox" name="consenso" id="Consenso"> 
+        
+        <select name="city">
+
+            <option value="">--scegli--</option>
+            <option value="roma">Roma</option>
+            <option value="milano">Milano</option>
+            <option value="napoli">Napoli</option>
+
+        </select>
+
+        <textarea name="messaggio" cols="30" rows="10"></textarea>
+        
+        
+        <button>Invia</button>
+        <input type="submit" name="invia i dati" value="Salva">
+
+    </form>
+</body>
+</html>
