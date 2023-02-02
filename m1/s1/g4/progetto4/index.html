@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sviluppo di una pagina web - Blog Epicode</title>
+    <meta name="description" content="Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in modo facile.">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/logo.svg" alt="Logo Epicode" width="250"
+            height="60">
+         </div>
+         <p> EPICODE - IL BLOG DEI DEVELOPERS </p>
+         <div>
+            
+            <nav>
+                <a href="#" target="_blank">HOME</a><br>
+                <a href="#"
+                target="_blank">ARTICOLI</a><br>
+                <a href="#" target="_blank">LAVORA CON NOI</a>        
+            </nav>
+         </div>    
+    </header>
+    <br>
+    <main>
+        <article>
+            <h1>
+                Come creare un template per i post
+            </h1>
+            <p> di Mario Rossi - pubblicato il 25 - 10 - 2020</p>
+            <p>La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le <strong>parti comuni</strong> da applicare a tutte le pagine</p>
+            <p>Le varie aree saranno quindi suddivise in: 
+                <ul>
+                    <li>Contenuti di intestazione del tag <code>&lt;header&gt;</code></li>
+                    <li>Contenuti centrali variabili del tag <code>&lt;main&gt;</code> (corpo principale)</li>
+                    <li>Contenuti di fine pagina comuni, da inserire nel tag <code>&lt;footer&gt;</code></li>
+                </ul>
+            </p>
+            <h2>Formattazione del codice</h2>
+            <p>Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da <strong>selezionare con i CSS</strong>. Perciò i passi saranno:
+            <ol>
+                <li>Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag appropriato</li>
+                <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
+                <li>Applicare gli stili CSS</li>
+            </ol>
+        </p>
+        <p>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressochè totale.
+        </p>
+        <p>
+            <table>
+                <caption>Diffusione dei CSS</caption>
+                <thead>
+                <tr>
+                    <th>Anno</th>
+                    <th>% di utilizzo</th>
+                    <th>Supporto browser</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2000</td>
+                    <td>20%</td>
+                    <td>17%</td>
+                </tr>
+                <tr>
+                    <td>2002</td>
+                    <td>35%</td>
+                    <td>22%</td>
+                </tr>
+                <tr>
+                    <td>2004</td>
+                    <td>45%</td>
+                    <td>42%</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                 <td>Anno</td>   <td>Totale</td> <td>Numero del totale</td>
+                </tfoot>   
+            </table>
+        </p>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
