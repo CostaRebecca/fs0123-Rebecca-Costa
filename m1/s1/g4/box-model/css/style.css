@@ -1,0 +1,72 @@
+.quadrato {
+    width: 200px; /*larghezza*/
+    height: 200px; /*altezza*/
+    background-color: red; /*sto modificando l'area interna del box (div perchè elemento blocco) (va bene solo per elementi di tipo blocco,infatti non ha fuzionato nella classe dello span perchè di tipo inline) */
+    display: block; /*questo rende una linea un blocco */
+
+}
+
+.quadrato {
+    width: 200px; 
+    height: 200px; 
+    background-color: red; 
+    overflow: auto; /* per inserire automaticamnte il testo nell'elemento blobbo*/
+    
+}
+
+
+.max{
+    max-width: 900px;
+    background-color: blueviolet;
+    max-height: 100px;
+    overflow: auto;
+}
+
+/*area del padding*/
+
+.padding { /* il padding è l'area fra il bordo e il contenuto */
+    padding: 15px; /*il padding va ad aggiungere contenuto verso l'esterno del box */
+    /* 
+    padding-top: 15px    (versione di scrittura estesa)
+    padding-right: 15px
+    padding-bottom: 15px
+    padding-left: 15px 
+    
+
+    padding: 15px 0; sopra e sotto 15px(il primo valore va ad identificare l'asse x) 0 sinistra desta ( va ad indentificare l'asse y)
+
+    padding: 15px 0 15 px; top right bottom left
+
+    */
+    box-sizing: border-box; /*faccio si che il padding sia ritagliato all'interno */
+} 
+
+/*area del border; il border si trova esternamente subito dopo il padding*/ 
+
+.border {
+    border: 5px solid black;
+    border-radius: 50%;  
+}
+     /*per andare ad arrotondarlo */ /*anche con border posso andare a modificare la signola parte utlizzando border-top-left-radius border-top-left-radius border-top-right-radius border-bottom-left-radius border-bottom-right-radius 
+ 
+/*posso andare ad agire come per il padding cioè top right bottom left */
+
+
+
+/*area del margin*/ /*lo utilizzo per creare spazio*/
+
+.margin {
+    margin: 100px;
+}
+ /* 
+    margin-top: 15px    (versione di scrittura estesa)
+    margin-right: 15px
+    margin-bottom: 15px
+    margin-left: 15px 
+    
+
+    margin: 15px 0; sopra e sotto 15px(il primo valore va ad identificare l'asse x) 0 sinistra desta ( va ad indentificare l'asse y)
+
+    margin: 15px 0 15 px; top right bottom left
+
+    */
