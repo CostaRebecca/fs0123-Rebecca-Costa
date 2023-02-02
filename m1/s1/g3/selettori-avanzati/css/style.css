@@ -1,0 +1,111 @@
+
+/* stili generali */
+a{
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+
+}
+
+a:active{
+    font-size: 1.7rem;
+
+}
+
+
+/* a, a:visited, a:active per scriverli raggruppati */
+
+
+
+
+/* stili generali */
+
+
+
+
+
+
+section span {
+    text-decoration: line-through;
+} /*prende tutti gli span che sono nella section */ 
+
+/* section > span prende invece solo i figli diretti */ 
+
+ section + small {  /*va a prendere il primo small che è dopo la section */
+    font-weight: bold; 
+
+ }
+
+ section ~ small {  /*va a prendere il primo small che è dopo la section */
+    font-weight: bold;
+    color: red; 
+ }
+
+
+ #toggle { /*: pseudo classe */
+     display: none; /* display none nasconde l'elemento */
+ }
+
+ #menu{
+    background-color: bisque;
+    height: 0;
+    overflow: hidden; /* nasconde l'elemento */
+    transition: height 0.3s;
+ }
+
+ #toggle:checked + #menu {
+    height: 70px;
+ }
+
+ #menu li:hover {
+    background-color: aquamarine;
+ }
+
+
+ /*TABELLA*/
+
+ table {
+    width: 100%;
+ }
+
+ table td{
+    border: 1px solid black;
+ }
+
+ table tr:nth-of-type(odd):not(.bianca){
+    background-color: aquamarine;
+
+ }
+
+ table tr:first-child td:first-child{
+    background-color: blueviolet;
+    color: brown;
+ }
+
+ table tr:first-child td:nth-of-type(2){
+    background-color: rgb(55, 226, 43);
+    color: rgb(52, 47, 63);
+ }
+
+ table tr:first-child td::after{ /*:: va a indicare uno pseudo elemento */
+    content: "+"
+ }
+
+ table tr:first-child td::before{ /*:: va a indicare uno pseudo elemento */
+    content: "+";
+    animation-name: ruota;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    
+ }
+
+@keyframes ruota{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}
+
+}
+
+
