@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // operatori di assegnazione
+        let a = 2;
+        let b = 4;
+
+        console.log(b)//4
+        b = 6;
+        console.log(b)//6
+        a += 2;//2 + 2 = 4
+        console.log(a)
+        a -= 2;//4 - 2 = 2
+        console.log(a)
+
+        let c = '<div>Ciao'
+        c += '</div>';// aggiungo la chiusura del div
+        // c = c + '</div>' è come scrivere questo;
+        console.log(c); //<div>Ciao</div>
+
+        // operatori logici e di comparazione
+
+        let anni = 30;
+
+        console.log(anni < 18);// false
+        console.log(anni > 18);// true
+        console.log(18 > 18);// false, 18 è = 18, non superiore 
+        console.log(18 >= 18);//true
+        console.log(18 <= 18);//true
+        console.log(18 == 18);//true
+        console.log(18 != 18);//false
+
+        console.log(anni == '30');//true => coversione e comparazione,viene valutato il dato e non il tipo di dato
+
+        console.log(anni === '30');//false => comparazione, vengono comparati valore e tipo di dato
+
+        /* 
+        altre possibilià: !== devono essere differenti il tipo o il valore
+         */
+
+         console.log(anni >= 18 && anni <= 110);//true se tutte le comparazioni sono vere
+
+         console.log(anni >= 18 || anni <= 110);//true se una delle comparazioni è vera
+
+         console.log(!true);//false
+
+         console.log(!(anni >= 18 && anni <= 110));// il ! è in grado di invertire qualsiasi valore booleano => false(prima era true riga 48)
+
+
+         // operatore ternario
+
+         let controllo = anni >= 18 ?
+         'Sei maggiorenne' : 'Sei minorenne';
+         console.log(controllo);
+        
+        
+    </script>
+</body>
+</html>
