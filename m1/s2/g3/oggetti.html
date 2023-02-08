@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let obj = {};
+
+        let pizza = {
+            gusto: 'Margherita',
+            prezzo: 5&euro,
+            mostraPrezzo : function(){
+                console.log(`La pizza ${this.gusto} costa ${this.prezzo}`)
+            }
+        }
+
+        console.table(pizza)
+        //document.write(pizza)//NO
+        document.write(pizza.gusto)
+
+        //lettura di una proprietà 
+
+        console.log(pizza.gusto)
+        console.log(pizza.prezzo)
+
+        //scrittura
+
+        pizza.gusto = 'Diavola'
+        console.log(pizza.gusto)
+
+        pizza.mostraPrezzo()
+
+        //mostraPrezzo()//La funzione non esiste
+
+
+    </script>
+    
+</body>
+</html>
