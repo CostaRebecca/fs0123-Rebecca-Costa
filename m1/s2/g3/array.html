@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let numeri = [1,2,3,4,5,43,78,32];
+        document.write(numeri)//viene convertito in stringa, formato csv
+
+        let arr = [];
+
+        let dati = [
+           'stringa',
+           '22',
+           true,
+           {},
+           []
+        ]
+
+        //lettura dei valori in un array
+
+        let pizze = ['Margherita','Diavola','4 Formaggi'];
+        console.log(pizze)
+
+        console.log(pizze[0])
+
+        let pizza2 = pizze[1];
+        console.log(pizza2);
+
+        //scrittura
+
+        pizze[2] = 'Capricciosa';
+        console.log(pizze);
+
+        //ATTENZIONE: EVITIAMO I BUCHI
+
+        //aggiungere alla fine dell'array senza creare buchi
+
+        pizze.push('Parigina','Mimosa');
+        console.log(pizze);
+
+        //proprietà length
+
+        console.log(pizze.length);
+
+        console.log(pizze[pizze.length - 1]);//leggo l'ultimo elemento dell'array
+
+
+
+        //riordinare
+        let studenti = ['Mauro','Vittorio','Rebecca'];
+        console.log(studenti);
+        studenti.sort();//riordina in ordine alfabetico,non è adatto per riordinare numeri
+        console.log(studenti);
+        studenti.reverse();//inverte l'ordine attuale       
+        console.log(studenti);
+
+        //riordinare i numeri
+        let numbers = ['1','100','20'];
+        numbers.sort(function(a,b){
+            return a - b
+        });
+        console.log(numbers);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
