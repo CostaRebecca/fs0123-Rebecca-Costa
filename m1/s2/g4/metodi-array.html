@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //array.metodo(funzione) ->la funzione argomento di un'altra funzione è chiamata callback
+
+        //forEach -> serve a ciclare gli array
+
+        let fiori = ['Rosa ','Margherita ','Tulipano'];
+
+        fiori.forEach(function(valore){
+
+            document.write(valore)
+          
+        })
+
+        document.write('<hr>');
+
+        //map -> si usa quando dobbiamo effettuare una modifica ad ogni elemento degli array
+
+
+        let fiori1 = ['Rosa ','Margherita ','Tulipano'];
+
+        let fiori1Div = fiori1.map(function(valore){
+            
+            return `<div>${valore}</div>` 
+        })
+
+        fiori.forEach(function(valore){
+
+        document.write(valore)
+  
+        })
+
+        document.write('<hr>');
+
+        let numeri = [1,2,3,4,5,6,7];
+
+        console.log(numeri.map(function(n){return n * 2}))//praticamente mi rimanda i numeri del mio array moltiplicati per due
+
+        //filter -> si usa per filtrare i dati -> mi restituisce un array con dati filtrati e con tutti i risultati trovati
+
+        let numeriFiltrati = numeri.filter(function(n){
+            return n > 3
+        }) 
+        console.log(numeriFiltrati)
+
+        //find -> restituisce il primo valore trovato NON UN ARRAY a meno che non vado a cercare un array dentro l'array
+
+        let numeroTrovato = numeri.find(function(n){
+            return n > 3
+        }) 
+        console.log(numeroTrovato)
+
+        //findIndex
+
+        let rebecca = [2,4,5,7,9];
+        let primoItem = rebecca.findIndex(numbers)
+
+        function numbers(reb){ 
+            return reb < 10
+
+        }
+        console.log(rebecca)
+
+        //reduce
+        
+        numeri = [1,2,3,4,5,6,7];
+        let somma = numeri.reduce(function(p,c){
+            return p + c
+        })
+        console.log(somma)
+        
+
+        numeri = [1,4,80,74,309,1]
+        let numeroGrande = numeri.reduce(function(p,c){
+            if(p > c){
+               return p;
+            }else{
+               return c;
+            }
+        }
+        )
+        console.log(numeroGrande)
+
+
+        //Eliminare da un array
+
+        //filter 
+        //per esclusione
+
+        let colore = ['giallo','rosso','verde','blu'];
+
+        colore = colore.filter(function(c){
+            return c != 'rosso';
+        })
+
+        console.log(colore)
+
+
+         //indexOf
+        //eliminazione diretta
+
+        colore = ['giallo','rosso','verde','blu'];
+        let indice = colore.indexOf('verde');//trova il verde e mi dice il suo indice(posizione)
+
+        colore.splice(indice,1);//mi elimina n elementi partendo dalla sua posizione(compresa) -> in questo caso n = 1 perciò andrà ad eliminare il verde
+
+        console.log(colore)
+         
+        
+        //eliminazione di array di oggetti 
+
+       colore = [{
+        tipo : 'olio', 
+        pennello : 'piccolo',
+        disponibile : true
+       },
+       {
+        tipo : 'acquerello', 
+        pennello : 'grande',
+        disponibile : true
+       },
+       {
+        tipo : 'cera', 
+        pennello : 'medio',
+        disponibile : false
+       }
+
+       ];
+
+       let index = colore.findIndex(function (cc){
+        return !cc.disponibile
+       })// return cc.disponibile === false
+       //ciclando tutti i colori indicami l'indice del primo colore disponibile a false 
+
+       console.log(index)
+       colore.splice(index,1);//elimino il colore trovato con index
+       console.log(colore)
+
+       
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -7,7 +7,7 @@ let b = 20;
 
 if(a > b){
   console.log(' a è il più grande');
-}else if (b < a){
+}else if (b > a){
   console.log('b è il più grande');
 
 }else{
@@ -18,6 +18,14 @@ if(a > b){
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
+
+let different = 22;
+
+if(different != 5){
+  console.log('Not Equal');
+}else{
+  console.log('Equal');
+}
 
 
 

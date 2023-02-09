@@ -9,6 +9,7 @@
 <body>
 
     <script>
+        {
         let obj = {};
 
         let pizza = {
@@ -36,6 +37,29 @@
         pizza.mostraPrezzo()
 
         //mostraPrezzo()//La funzione non esiste
+    }
+
+    //costruttore
+    {
+        function Pizza(_gusto,_prezzo){
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+            this.mostraPrezzo = function(){
+            console.log(`La pizza ${this.gusto} costa ${this.prezzo}€`)
+            }
+        }
+
+        let margherita = new Pizza ('Margherita',5);
+        let diavola = new Pizza ('Diavola',1)
+
+        console.log(margherita);
+        console.log(diavola);
+
+        marherita.mostraPrezzo();
+        diavola.mostraPrezzo();
+
+    }
+
 
 
     </script>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //While
+
+        let i = 0;
+        while(i < 10){//finchè i < 10 
+            document.write('Ciao<br>')//scrivi a schermo Ciao
+            i++;//incrementa i di 1
+
+        }//torna riga 15
+
+        document.write('<hr>');
+
+
+        let n = 0;
+        while(n < 10){//finchè n < 10
+            document.write(n)//scrivi a schermo il valore di n
+            n++;//incrementa n di 1
+
+        }//torna alla riga 22
+
+        document.write('<br>')
+
+        document.write('Il ciclo ha finito le operazioni')
+
+        document.write('<hr>');
+
+
+/*
+        let x = 0;
+        setInterval(function(){
+            console.loh(x);
+            x++;
+        },1000 
+        );
+
+        //setinterval(funzione)tempo
+
+*/
+
+        //esempi while con break e continue
+
+        i = 0;//resetto la i a 0
+        while(i <= 5){
+
+            if( i == 2){
+                i++;
+                continue;//salta all'iterazione successiva
+            }
+                
+            document.write(i);
+            i++;
+        }
+
+        document.write('<hr>');
+
+        i = 0;//resetto la i a 0
+        while(i <= 5){
+
+            if( i == 2){
+                i++;
+                break;//termina il ciclo
+            }
+                
+            document.write(i);
+            i++;
+        }
+
+        document.write('<hr>');
+
+
+        //do while
+
+        let p = 0;
+        do{// svolgi questa operazione 
+            document.write(p);
+            p++;
+        }while(p > 100)//se e finchè la condizione è vera, riesegui tutto dalla riga 74
+
+        document.write('<hr>');
+
+
+        //for con variabile incrementata
+
+        for(/*variabile*/let r = 0;/*condizione*/r < 10;r++){
+            document.write(r)
+        }
+
+        document.write('<hr>');
+
+        //for con variabile decrementata
+
+        for(let r = 9;r >= 0;r--){
+            document.write(r)
+        }
+
+        document.write('<hr>');
+
+        for(let r = 9;r >= 0;r--){
+            document.write(`<div>${r}</div>`)
+        }
+
+        document.write('<hr>');
+
+        let pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+        for(let p = 0; p < pizze.length; p++){
+
+            document.write(`<div>${pizze[p]}</div>`)
+        }
+
+        document.write('<hr>');
+
+
+        //for off => ideale per ciclare qualsiasi cosa sia iterabile => ideale per gli array
+
+        pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+        for(let pizza of pizze){
+            document.write(`<div>${pizza}</div>`)
+        }
+
+        document.write('<hr>');
+
+        for(let lettera of 'Testo'){
+            document.write(lettera + '-');
+        }
+
+        for(let lettera of 'Testo'){
+            document.write(lettera + '<br>');
+        }
+
+        document.write('<hr>');
+
+        //for in => per ciclare oggetti
+
+        let margherita = {
+            gusto : 'Margherita',
+            prezzo : 5
+        }
+
+        for(let prop/*prop -> proprietà*/ in margherita)//per ogni proprietà che trovi dentro l'oggetto margherita mi scriverai
+        {
+            document.write(`<div>${margherita[prop]}</div>`)
+        }//prendi la proprietà di margherita -> Margherita 5
+
+
+        document.write('<hr>');
+
+
+        let mimosa = {
+            gusto : 'Mimosa',
+            prezzo : 5
+        }
+
+        for(let prop in mimosa)
+        {
+            document.write(`<div>${prop} : ${mimosa[prop]}</div>`)
+        }
+
+        document.write('<hr>');
+
+
+        let marinara = {
+            gusto : 'Marinara',
+            prezzo : 5,
+            metodo : function(){}
+        }
+
+        let campiVisualizzati = ['gusto','prezzo']
+
+        for(let prop in marinara)
+        { 
+            if(campiVisualizzati.includes(prop)){
+            document.write(`<div>${prop} : ${marinara[prop]}</div>`)
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
