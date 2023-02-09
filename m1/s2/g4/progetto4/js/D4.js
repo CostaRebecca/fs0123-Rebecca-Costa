@@ -226,8 +226,23 @@ let totale = 957;
                 break;
 
                default:
-                break;
+               console.log('default')
         } */
+
+
+        if (totale < 500) {
+          console.log('Ship is under loaded');
+        } else if (totale == 500) {
+          console.log('Ship is half loaded');
+        } else if (totale > 700) {
+          if (totale > 700 && totale < 900) {
+            console.log('Warning: Load is over 700');
+          } else if (totale > 900 && totale < 1000) {
+            console.log('Critical Load: Over 900');
+          } else {
+            console.log('DANGER! OVERLOAD ALERT: Jump ship now!');
+          }
+        }
 
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
