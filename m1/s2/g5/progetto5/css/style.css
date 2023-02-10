@@ -1,0 +1,30 @@
+.container {
+    width: 22rem;
+    height: 18rem; 
+    margin:0 auto;
+    }    
+    
+   
+
+#display {
+    width: 265px;
+    height: 3rem;
+   
+}
+
+.tasti {
+    display: inline-block;
+    height: calc(100% / 4 - 0.4rem);        
+    width: calc(100% / 4 - 0.4rem);
+    margin: 3px;
+}
+ 
+button {
+    height: 100%;
+    width: 100%;
+}
+
+.operazioni {
+    height: 100%;
+    width: 100%;
+}
