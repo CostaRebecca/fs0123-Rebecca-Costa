@@ -1,6 +1,4 @@
 
-
-
 function interazione(element){
     let simbolo = element.getAttribute('data-calc')
 
