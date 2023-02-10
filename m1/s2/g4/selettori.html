@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <div id="test">Hello World</div>
 
     <div class="elemento"></div>
@@ -17,23 +18,43 @@
 
 
     <script>
+{
+
+       let test = document.getElementById("test");//un solo elemento
+       console.dir(test);
+
+       console.log(test.innerHTML);//lettura
+
+       test.innerHTML = 'Ciao Mondo!';//vai dentro la variabile test prendi l'innerHTML e cambia il suo valore in 'Ciao Mondo'
+
+       
+       let elementi = document.getElementsByClassName('elemento');
+
+       let divs = document.getElementsByTagName('div');
+       console.log(divs)
 
 
-       let test = document.getElementById("test");
-       console.dir(test.textContent);
+       for(let d of divs){
+        d.innerHTML = 'Ciao';
+        
 
-       test.textContent = "Ciao Mondo!";
-       console.dir(test.textContent);
-
-       let elementi = document.getElementsByClassName('elemento');//tanti elementi
-       console.log(elementi);
-
-       //elementi[0].textContent = 'ciao'
-
-       for(let elemento of elementi){
-        elemento.textContent = 'ciao';
        }
 
+      /* for(let i = 0; i < divs.length; i++){
+        divs[i].innerHTML = 'Ciao';
+        
+
+       } */
+
+      } //nuovi selettori
+
+{
+    let test = document.querySelector('#test');//un solo elemento
+    let primoElemento = document.querySelector('.elemento');//un solo elemento
+
+
+    let allElements = document.querySelectorAll('.elemento');//restituisce sempre un array
+}
 
 
 

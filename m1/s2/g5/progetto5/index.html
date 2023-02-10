@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+   
+    <div class="container">
+
+        <input type="text" id="display">
+        
+        <div class="tasti">
+             <button data-calc ="1" onclick="interazione(this)">1</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="2" onclick="interazione(this)">2</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="3" onclick="interazione(this)">3</button>
+        </div>
+        <div class="tasti">
+             <button data-calc ="4" onclick="interazione(this)">4</button>
+        </div>
+        <div class="tasti">
+             <button data-calc ="5" onclick="interazione(this)">5</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="6" onclick="interazione(this)">6</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="7" onclick="interazione(this)">7</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="8" onclick="interazione(this)">8</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="9" onclick="interazione(this)">9</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="0" onclick="interazione(this)">0</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="+" onclick="interazione(this)">+</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="-" onclick="interazione(this)">-</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="*" onclick="interazione(this)">x</button>
+        </div>
+        <div class="tasti"> 
+            <button data-calc ="/" onclick="interazione(this)">÷</button>
+        </div>
+       <div class="tasti"> 
+            <input type="button" class="operazioni" value="√" onclick="display.value = Math.sqrt(display.value)">
+        </div> 
+        <div class="tasti"> 
+            <input type="button" class="operazioni" value="cos(x)" onclick="display.value = Math.cos(display.value)">
+
+        </div> 
+        <div class="tasti"> 
+            <input type="button" class="operazioni" value="tan(x)" onclick="display.value = Math.tan(display.value)">
+
+        </div>
+        <div class="tasti"> 
+            <input type="button" class="operazioni" value="sin(x)" onclick="display.value = Math.sin(display.value)">
+
+        </div> 
+        <div class="tasti"> 
+            <button data-calc="." onclick="interazione(this)">,</button>
+        </div>
+    
+    <div class="tasti"> 
+        <button data-calc ="A presto!" onclick="interazione(this)">OFF</button>
+    </div>
+
+    <div class="tasti"> 
+        <button onclick="totale()">=</button>
+    </div>
+
+
+    
+    <script src="js/script.js"></script>
+    
+
+</body>
+</html>
