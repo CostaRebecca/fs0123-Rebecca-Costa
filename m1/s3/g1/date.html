@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="ora"></div>
+
+
+
+    <script>
+        let adesso = new Date();//scrivo nella variabile un oggeto date, contenente le info relative a data ed ora attuali 
+
+        console.log(adesso);
+
+        //metodi per la lettura (get)
+
+        let year = adesso.getFullYear();
+
+        console.log(year);
+
+        let month = adesso.getMonth();//da 0 a 11
+
+        console.log(month);
+
+        let day = adesso.getDate();
+
+        console.log(day);
+
+        console.log(year,month,day);
+
+
+
+        adesso.setDate(14);
+        adesso.setMonth(11);
+        //qualora si superasse il numero 11, anche l'anno viene spostato in avanti
+        //il mese 12 è gennaio dell'anno successivo
+        //lo stesso funzionamento avviene in negativo
+        //il mese -1 è dicembre dell'anno precedente
+
+        console.log(adesso);
+        
+        const options = {
+            weekday: 'long', year: 'numeric', month: 'long', day:'numeric'
+        };
+        
+        console.log(adesso.toLocaleDateString('it-IT',options));
+
+        //esempi
+        
+
+        //eseguo una funzione 1 volta dopo 3 secondi
+        setTimeout(function(){
+            console.log(new Date())
+        },3000);//3000 millisecondi
+
+        //eseguo una funzione all'infinito ogni secondo
+        setInterval(function(){
+            console.log(new Date())
+        },1000);
+
+        setInterval(function(){
+            let tag = document.querySelector('#ora');
+
+            let orario = new Date().toLocaleTimeString();
+
+            tag.innerText = orario;
+
+        },1000);
+
+        //countdown
+
+        let count = 10;
+
+        let timer = setInterval(function(){
+            console.log(count);//mostro il valore aggiornato
+            if(count == 0){
+                clearInterval(timer)
+            }
+            count--;//riduco count di 1
+
+
+        },1000)
+
+
+
+    </script>
+</body>
+</html>
