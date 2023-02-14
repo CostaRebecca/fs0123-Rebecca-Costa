@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+   <div id="target"></div>
+
+    <script>
+        let menu = [
+            {
+                gusto: 'margherita',
+                prezzo:'5',
+                disponibile: true
+            },
+            {
+                gusto: 'diavola',
+                prezzo:'7',
+                disponibile: true
+            },
+            {
+                gusto: 'capricciosa',
+                prezzo:'6',
+                disponibile: true
+            },
+            {
+                gusto: 'marinara',
+                prezzo:'4.50',
+                disponibile: false
+            }
+        ];
+
+        
+        let target = document.getElementById('target');
+
+        for(let pizza of menu){
+
+            let div = document.createElement('div');//crea e salva nella variabile div un oggetto html di tipo div -> <div></div>
+            div.textContent = pizza.gusto;
+            div.classList.add('item','altraclasse');
+
+            div.addEventListener('click',()=>{
+                div.remove();
+            })
+
+            target.append(div);
+
+
+
+          // target.innerHTML += `<div class="item">${pizza.gusto}</div>`;
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>

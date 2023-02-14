@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        let array = [];
+        console.log(array.length);
+
+       let arr = [1,2,3,4,5].map(n => n*2);//[2,4,6,8,10]
+       console.log(arr);
+
+       //lettura
+       let pizze = ['Margherita','Diavola','Marinara'];
+
+       console.log(pizze[1]);
+
+       pizze[2] = 'Capricciosa';
+       console.log(pizze)
+
+       //ordinamento -> sort()
+
+       pizze.sort();
+       console.log(pizze);
+
+       //eliminare dalla fine di un array -> pop
+
+       let lettere=['a','b','c','d','e','f'];
+
+       lettere.pop();//pop elimina l'ultimo elemento
+       console.log(lettere);
+
+       //ma permette anche di salvare l'elemento eliminato
+
+       let eliminato = lettere.pop();
+
+       console.log(lettere,`hai eliminato il valore ${eliminato}`)
+
+       //push
+
+       let len = lettere.push('#');
+
+       console.log(lettere,`la length aggiornata è:${len}`)
+
+       //eliminare ed aggiungere all'inizio di un array
+
+       lettere=['a','b','c','d','e','f'];
+
+       let eliminatoInizio = lettere.shift();
+       console.log(lettere,`hai eliminato il valore:${eliminatoInizio}`)
+
+       let lenInizio=lettere.unshift('#');//aggiungo all'inizio
+       console.log(lettere,`la length aggiornata è:${lenInizio}`)
+
+
+
+
+       //splice per eliminare da un qualsiasi indice 
+
+       lettere=['a','b','c','d','e','f'];
+
+       let indice = 0;//indice da dove inizio ad eliminare
+       let qty = 3;//quantitè che vado ad eliminare 
+
+       lettere.splice(indice,qty)
+
+       console.log(lettere);
+
+       let eliminati = lettere.splice(indice,qty)
+
+       console.log(lettere,`valori rimossi:${eliminati}`,eliminati);
+
+       //sostituzione da un qualsiasi indice
+
+       lettere=['a','b','c','d','e','f'];
+
+       lettere.splice(2,2,'###','###');
+       console.log(lettere);
+
+       //concatenazione
+
+       let lettere1 = ['a','b','c','d'];
+       let rebecca = ['rebecca','casa'];
+
+       let array1 = lettere1.concat(rebecca);
+       let array2 = rebecca.concat(lettere1);
+
+       let duplicato = lettere1.concat(lettere1);
+
+       console.log(array1,array2,duplicato);
+
+       //con operatore spread
+
+       let lettereSpread = [...array1,...rebecca];
+
+       console.log(lettereSpread);
+
+       //assegnamento in destrutturazione 
+
+       pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+
+       let [margherita,diavola,marinara] = pizze;
+
+       console.log(margherita,diavola,marinara,pizze);
+
+
+       //slice
+
+       let telefono = ['iphone','samsung','nokia','motorola','iphone5'];
+       console.log(telefono)
+
+       let telefono1 = telefono.slice(0,3)
+       console.log(telefono1)
+
+       
+
+
+
+
+
+
+
+
+
+       
+
+
+
+       
+
+
+
+
+
+
+    </script>
+</body>
+</html>

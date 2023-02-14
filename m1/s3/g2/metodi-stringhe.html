@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //indexOf() -> sulle stringhe mi restituisce l'indice in cui inizia a svilupparsi la parola che cerco
+
+        let stringa = 'Ci manca molto il CSS';
+        console.log(stringa.indexOf('molto'));//9 
+        //indexOf se non trova nulla mi restituisce -1
+
+
+        let ricerca = 'CSS'
+        if(stringa.indexOf(ricerca)){
+            console.log('trovata')
+        }
+
+        let ricerca1 = 'css'
+        if(stringa.toLowerCase().indexOf(ricerca1.toLowerCase())!= -1){
+            console.log('trovata')
+        }//toLowerCase converte i caratteri maiuscoli in caratteri minuscoli
+
+        //replace("parola da sostituire","parola che sostituisce")
+
+        let testo = 'Lorem Ipsum####'
+
+        console.log(testo.replace('#',''));//replace sostituisce solo la prima corrispondenza
+
+        console.log(testo.replaceAll('#',''));//replaceAll sostituisce tutte le corrispondenze
+
+        //replace accetta anche regex REPLACEALL NO
+        //la regex che indica g trova tutte le corrispondenze quindi permette a replace di sostituirle
+        console.log(testo.replace(/#/g,''));
+
+        //split e join 
+        //split non modifica il dato originale 
+        let csv = 'mario,rossi,30';
+        console.log(csv.split(','));//taglio in corrispondenza della virgola
+
+        let dati = ['mario','rossi',30];
+        //join trasforma l'array in stringa
+        //se non indico un argomento unisce con la virgola
+        console.log(dati.join(''));
+        //posso indicare un carattere a scelta
+        console.log(dati.join(';'));
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
