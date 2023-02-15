@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+main{
+    height:100vh;
+}
+input{
+    width: 100%;
+    padding: 1rem;
+}
+button#aggiungi{
+    width: 100%;
+    padding: 1rem;
+    background: lightblue;
+}
