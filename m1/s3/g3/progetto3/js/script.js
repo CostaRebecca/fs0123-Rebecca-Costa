@@ -31,3 +31,4 @@ function aggiungiTask() {
 function rimuoviTask(div) {
     div.remove(); 
   }
+  
