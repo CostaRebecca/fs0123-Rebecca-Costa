@@ -342,7 +342,6 @@ function creaArrayTitolo(movies) {
 }
 console.log(creaArrayTitolo(movies));
 
-
 /* ESERCIZIO 15
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
