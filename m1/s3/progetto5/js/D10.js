@@ -166,7 +166,7 @@ console.log(isThisAnEmail('mailgmailcom'));
 
 function whatDayIsIt() {
 
-  let giorniDellaSettimana = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato',] //parto da domenica perchè si conta 0-6
+  let giorniDellaSettimana = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato',] //parto da domenica perchè si conta 0-6
   let date = new Date();
   let giorno = date.getDay();
   let oggi = giorniDellaSettimana[giorno];
@@ -189,18 +189,18 @@ console.log(whatDayIsIt());
   }
 */
 
-function rollTheDices (n) {
+function rollTheDices(n) {
   let obj = {
     sum: 0,
     values: []
   }
 
-  for(let i = 0; i < n; i++){
+  for (let i = 0; i < n; i++) {
     let fun = dice(); //invocazione della funzione
     obj.values.push(fun) //salvo il valore nell'array
-    obj.sum +=  fun;
-} 
-return obj;
+    obj.sum += fun;
+  }
+  return obj;
 }
 console.log(rollTheDices(7));
 
@@ -221,17 +221,17 @@ console.log(rollTheDices(7));
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
-function deleteProp (obj,str) {
- delete obj[str]
- return obj;
+function deleteProp(obj, str) {
+  delete obj[str]
+  return obj;
 }
- console.log(deleteProp({nome:'la Nina',nome1:'La Pinta',nome2:'La santa Maria'},'nome1'))
+console.log(deleteProp({ nome: 'la Nina', nome1: 'La Pinta', nome2: 'La santa Maria' }, 'nome1'))
 
 
 //array per gli esercizi
 
 
- const movies = [
+const movies = [
   {
     Title: 'The Lord of the Rings: The Fellowship of the Ring',
     Year: '2001',
@@ -350,27 +350,27 @@ function deleteProp (obj,str) {
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 
-function newestMovie (movies){
+function newestMovie(movies) {
   let recent = movies[0];
 
-  for(i=0;i<movies.length;i++){
-    if(movies[i].Year>recent.Year){
-      recent=movies[i];
+  for (i = 0; i < movies.length; i++) {
+    if (movies[i].Year > recent.Year) {
+      recent = movies[i];
     }
   }
   return recent;
 }
- console.log(newestMovie(movies));
+console.log(newestMovie(movies));
 
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
-function countMovies (){
+function countMovies() {
   return movies.length;
 }
- console.log(countMovies())
+console.log(countMovies())
 
 
 /* ESERCIZIO 14
@@ -378,10 +378,10 @@ function countMovies (){
 */
 function onlyTheYears(movies) {
   let years = [];
-  for(i=0;i<movies.length;i++){
+  for (i = 0; i < movies.length; i++) {
     years.push(movies[i].Year);
   }
-  
+
   return years;
 }
 console.log(onlyTheYears(movies));
@@ -391,19 +391,17 @@ console.log(onlyTheYears(movies));
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
-
-
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
-function sumAllTheYears(movies){
+function sumAllTheYears(movies) {
   let tot = 0;
   let year = 0;
   for (let i = 0; i < movies.length; i++) {
     year = parseInt(movies[i].Year);
     tot += year;
-}
-return tot;
+  }
+  return tot;
 }
 console.log(sumAllTheYears(movies));
 
@@ -411,17 +409,17 @@ console.log(sumAllTheYears(movies));
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-function searchByTitle(movies,string) {
-  let arr=[];
-    for(i=0;i<movies.length;i++){
-  
-      if(movies[i].Title.includes(string)){
-        arr.push(movies[i]);
-      }
+function searchByTitle(movies, string) {
+  let arr = [];
+  for (i = 0; i < movies.length; i++) {
+
+    if (movies[i].Title.includes(string)) {
+      arr.push(movies[i]);
     }
-    return arr;
   }
-  console.log(searchByTitle(movies,'Avengers'));
+  return arr;
+}
+console.log(searchByTitle(movies, 'Avengers'));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
